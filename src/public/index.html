@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Speech To Text</title>
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="container">
+        <h1 class="title">Speech To Text</h1>
+        <div class="container-panel">
+          <button id="buttonRecord" title="Start Recording">
+            <img src="./assets/svg/mic-svgrepo-com.svg" alt="" width="50" />
+          </button>
+          <div class="status">Tap to Record.</div>
+          <div class="timer">00:00</div>
+          <div>
+            <button id="copy-button">
+              <img
+                src="./assets/svg/copy-3-svgrepo-com.svg"
+                alt=""
+                width="30px"
+                height="30px"
+                title="Copy"
+              />
+            </button>
+            <button id="clear-button">
+              <img
+                src="./assets/svg/erase-svgrepo-com.svg"
+                alt=""
+                width="30px"
+                height="30px"
+                title="Clear"
+              />
+            </button>
+          </div>
+        </div>
+        <textarea class="transcript" id="transcript"></textarea>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
