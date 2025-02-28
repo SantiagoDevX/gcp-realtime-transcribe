@@ -93,6 +93,7 @@ body {
     .transcript {
       grid-column: 1/3;
       text-align: justify;
+      box-sizing: border-box;
       font-size: 15px;
       margin-top: 20px;
       resize: none;
@@ -129,7 +130,6 @@ body {
   src: url("../assets/fonts/Technology.ttf");
 }
 .error {
-  /* background-color: red; */
   font-weight: bold;
   color: red;
   padding: 4px;
