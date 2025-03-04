@@ -1,0 +1,204 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"); */
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  background-color: black;
+  color: white;
+  h1 {
+    animation: turn 1s;
+  }
+}
+
+.page-container {
+  padding: 85px 20px 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 24px;
+  min-width: 290px;
+  min-height: 480px;
+  height: 75vh;
+  border-radius: 8px;
+  box-shadow: 0 0 8px black;
+  transition: height 0.3s;
+  display: grid;
+  gap: 2px;
+  grid-template-rows: calc(100% - 103px) 70px 33px;
+}
+
+.container h2 {
+  display: none;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.container-button-timer {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 80px calc(100% - 80px);
+  margin-bottom: 4px;
+}
+
+.recordButton {
+  display: grid;
+  place-content: center;
+  width: 80px;
+  height: 70px;
+  border-radius: 8px 0 0 0;
+  border: none;
+  background-color: white;
+  box-shadow: 0 0 4px black;
+  &:hover {
+    cursor: pointer;
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.recordButton img {
+  width: 60px;
+  transition: 0.3s;
+}
+
+.count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5f4fb6;
+  box-shadow: inset 0 0 4px black;
+  border-radius: 0 8px 0 0;
+  width: 100%;
+  height: 70px;
+  border: 1px solid black;
+}
+
+.count .timer {
+  color: white;
+  font-family: "Technology", sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.buttons {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.buttons .control {
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 4px black;
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.buttons .control img {
+  transition: 0.3s;
+}
+
+.buttons .control:nth-child(1) {
+  border-radius: 0 0 0 8px;
+}
+
+.buttons .control:nth-child(2) {
+  border-radius: 0 0 8px 0;
+}
+
+.transcript {
+  border-radius: 8px 8px 0 0;
+  color: black;
+  text-align: justify;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-size: 1rem;
+  padding: 8px;
+  box-shadow: 0 0 2px;
+  resize: none;
+}
+
+.recording {
+  animation: recording 1s infinite alternate;
+}
+
+@keyframes recording {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.975);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.025);
+  }
+}
+@font-face {
+  font-family: "Technology";
+  src: url("../assets/fonts/Technology.ttf");
+}
+
+@keyframes turn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    justify-content: center;
+    img {
+      animation: turn 1s;
+    }
+  }
+
+  header h1 {
+    font-size: 2em;
+    display: none;
+  }
+
+  .container h2 {
+    display: block;
+  }
+  .container {
+    grid-template-rows: 42px calc(100% - 155px) 70px 33px;
+    animation: turn 1s;
+  }
+}
+
+@media (min-width: 500px) {
+  .container {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    max-width: 400px;
+    width: 60%;
+  }
+}

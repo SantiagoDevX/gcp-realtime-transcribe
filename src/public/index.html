@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="/socket.io/socket.io.js"></script>
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon-144x140.png"
+      type="image/x-icon"
+    />
+    <title>NOVA Imaging | Voz a Texto</title>
+  </head>
+  <body>
+    <header>
+      <a href="https://novaimaging.co/">
+        <img
+          class="img-logo"
+          src="./assets/img/nova-dark.png"
+          height="40"
+          title="NOVA Imaging"
+        />
+      </a>
+      <div class="container-title">
+        <h1>Voz a texto</h1>
+      </div>
+    </header>
+
+    <div class="page-container">
+      <div class="container">
+        <h2>Voz a texto</h2>
+        <div class="controls">
+          <textarea
+            class="transcript"
+            name="transcript"
+            id="transcript"
+            aria-label="Transcrito"
+            disabled
+          ></textarea>
+        </div>
+        <div class="container-button-timer">
+          <button
+            class="recordButton"
+            id="record-button"
+            aria-label="Empezar Transcipción"
+            title="Empezar Transcipción"
+          >
+            <img src="./assets/svg/mic.svg" alt="" />
+          </button>
+          <div class="count">
+            <div class="timer">00:00</div>
+          </div>
+        </div>
+        <div class="buttons">
+          <button
+            class="control"
+            id="copy-button"
+            title="Copiar"
+            aria-label="Copiar Transcipción"
+          >
+            <img src="./assets/svg/copy.svg" alt="" width="30" />
+          </button>
+          <button
+            class="control"
+            id="clear-button"
+            title="Limpiar"
+            aria-label="Borrar Transcipción"
+          >
+            <img src="./assets/svg/erase.svg" alt="" width="30" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
